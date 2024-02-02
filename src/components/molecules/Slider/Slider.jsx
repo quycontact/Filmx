@@ -14,7 +14,7 @@ const Slider = ({ movie, genres }) => {
   return (
     <>
       {movie && movie.length > 0 ? (
-        <Carousel autoplay>
+        <Carousel autoplay autoplaySpeed={1800}>
           {movie.slice(0, 5).map((item, index) => {
             return (
               <div

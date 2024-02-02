@@ -3,8 +3,6 @@
 import './Navigation.scss';
 import { Typography, Row, Col, Input, Space } from 'antd';
 import { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { getPopularMovies } from '../../../config/api';
 
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 
