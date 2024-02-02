@@ -3,6 +3,10 @@ import Home from '../pages/Home/Home';
 
 const PublicRoute = [
   {
+    path: '',
+    element: <Home />,
+  },
+  {
     path: 'home',
     element: <Home />,
   },
