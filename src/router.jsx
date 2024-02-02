@@ -1,7 +1,8 @@
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
-import PrivateRoute from './routes/PrivateRoute';
+// import PrivateRoute from './routes/PrivateRoute';
 import PublicRoute from './routes/PublicRoute';
 import NotFound from './pages/Notfound/Notfound';
+import Navigation from './components/common/Navigation/Navigation';
 
 const Routes = () => {
   const router = createBrowserRouter([
@@ -9,11 +10,16 @@ const Routes = () => {
       path: '/',
       element: <Outlet />,
       errorElement: <NotFound />,
-      children: [...PublicRoute, ...PrivateRoute],
+      children: [...PublicRoute],
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <Navigation />
+      <RouterProvider router={router} />
+    </>
+  );
 };
 
 export default Routes;
