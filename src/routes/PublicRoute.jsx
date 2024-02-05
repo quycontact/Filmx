@@ -1,10 +1,15 @@
 // Define public routes accessible to all users
+import Home from '../pages/Home/Home';
 
 const PublicRoute = [
-  // {
-  //   path: 'login',
-  //   element: <Login />,
-  // },
+  {
+    path: '',
+    element: <Home />,
+  },
+  {
+    path: 'home',
+    element: <Home />,
+  },
   {
     path: 'service',
     children: [
