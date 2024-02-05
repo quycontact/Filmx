@@ -1,0 +1,70 @@
+.card-container {
+  width: 180px;
+
+  @media screen and (min-width: 640px) {
+    width: 250px; /* sm */
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 320px; /* md */
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 320px; /* lg */
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 280px; /* xl */
+  }
+
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding: 16px; /* Giả sử bạn muốn áp dụng padding là 16px, bạn có thể thay đổi giá trị này nếu cần thiết */
+  z-index: 0;
+
+  .card-img {
+    width: 100%;
+    height: auto;
+    &:hover {
+      opacity: 0.5;
+    }
+    border-radius: 0.25rem;
+  }
+  .card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+      opacity: 1;
+    }
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+    }
+
+    color: white;
+    padding: 16px;
+    .card-content_overlay {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      color: #b3b3b3; /* Màu xám, bạn có thể thay đổi giá trị này nếu cần thiết */
+    }
+  }
+  .card-content_description {
+    font-size: 0.75rem; /* text-xs */
+    margin-bottom: unset !important;
+    @media screen and (min-width: 768px) {
+      font-size: 1rem; /* md:text-base */
+    }
+    font-weight: bold; /* font-bold */
+  }
+}

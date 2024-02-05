@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable react-hooks/exhaustive-deps */
+
 import { Carousel, Typography } from 'antd';
 import './Slider.scss';
 import Skeleton from 'react-loading-skeleton';

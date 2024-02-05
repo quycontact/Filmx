@@ -1,0 +1,54 @@
+.movie-container-first {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .movie-container-inner {
+    color: #fffde3; /* text-[#FFFDE3] */
+    font-weight: bold; /* font-bold */
+    @media screen and (min-width: 768px) {
+      font-size: 1.25rem; /* md:text-xl */
+    }
+    padding: 16px; /* p-4 */
+    cursor: pointer; /* cursor-pointer */
+  }
+  .movie-icon {
+    color: white; /* text-white */
+    cursor: pointer; /* cursor-pointer */
+  }
+}
+.movie-container-second {
+  position: relative; /* relative */
+  display: flex; /* flex */
+  align-items: center; /* items-center */
+  margin-left: 0.5rem; /* ml-2 */
+  .icon-controller-left {
+    background-color: white; /* bg-white */
+    border-radius: 9999px; /* rounded-full (độ lớn lớn hơn giá trị tối đa của borderRadius để tạo thành hình tròn) */
+    left: 0; /* left-0 */
+    position: absolute; /* absolute */
+    opacity: 0.5; /* opacity-50 */
+    cursor: pointer; /* cursor-pointer */
+    z-index: 10; /* z-10 */
+    display: none; /* hidden */
+  }
+  .movie-content {
+    width: 100%; /* w-full */
+    height: 100%; /* h-full */
+    overflow-x: scroll; /* overflow-x-scroll */
+    white-space: nowrap; /* whitespace-nowrap */
+    scroll-behavior: smooth; /* scroll-smooth */
+    overflow: hidden; /* scrollbar-hide */
+    position: relative; /* relative */
+    word-wrap: break-word; /* break-words */
+  }
+  .icon-controller-right {
+    background-color: white; /* bg-white */
+    border-radius: 9999px; /* rounded-full (độ lớn lớn hơn giá trị tối đa của borderRadius để tạo thành hình tròn) */
+    right: 0; /* right-0 */
+    position: absolute; /* absolute */
+    opacity: 0.5; /* opacity-50 */
+    cursor: pointer; /* cursor-pointer */
+    z-index: 10; /* z-10 */
+    display: none; /* hidden */
+  }
+}
