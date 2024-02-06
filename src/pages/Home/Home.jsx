@@ -9,11 +9,17 @@ const Home = () => {
   const [movies, setMovies] = useState([]);
   const [genres, setGenres] = useState([]);
 
-  useEffect(async () => {
-    const data = await getPopularMovies();
-    const genres = await getGenres();
-    setGenres(genres.genres);
-    setMovies(data.results);
+  useEffect(() => {
+    const fetchPopularMovies = async () => {
+      const popularMovies = await getPopularMovies();
+      setMovies(popularMovies.results);
+    };
+    const fetchGenres = async () => {
+      const genres = await getGenres();
+      setGenres(genres.genres);
+    };
+    fetchGenres();
+    fetchPopularMovies();
   }, []);
 
   return (
