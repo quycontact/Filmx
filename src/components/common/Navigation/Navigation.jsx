@@ -58,8 +58,12 @@ const Navigation = () => {
             >
               Trending
             </NavLink>
-            <NavLink className="navigation__link" exact="true">
-              TV Shows
+            <NavLink
+              className="navigation__link"
+              exact="true"
+              to={route.DISCOVER}
+            >
+              Discover
             </NavLink>
             <NavLink className="navigation__link" exact="true">
               People

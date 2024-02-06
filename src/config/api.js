@@ -40,18 +40,18 @@ export const getTrendingMovies = (page = 1) => {
   });
 };
 
-// export const getDiscoverMovies = (filter: IFilterProps, page = 1) => {
-//   return httpRequest<IResponse<IMovieData[]>>({
-//     url: `/discover/movie`,
-//     params: {
-//       page,
-//       with_genres: filter.genre,
-//       year: filter.year,
-//       first_air_date_year: filter.year,
-//       sort_by: filter.sort
-//     }
-//   });
-// }
+export const getDiscoverMovies = (filter, page = 1) => {
+  return httpRequest({
+    url: `/discover/movie`,
+    params: {
+      page,
+      // with_genres: filter.genre,
+      // year: filter.year,
+      // first_air_date_year: filter.year,
+      // sort_by: filter.sort,
+    },
+  });
+};
 
 // export const getUpcomingMovies = (page = 1) => {
 //   return httpRequest<IResponse<IMovieData[]>>({

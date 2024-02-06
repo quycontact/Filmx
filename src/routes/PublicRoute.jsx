@@ -1,4 +1,5 @@
 // Define public routes accessible to all users
+import Discover from '../pages/Discover/Discover';
 import Home from '../pages/Home/Home';
 import TrendingMovies from '../pages/TrendingMovies/TrendingMovies';
 import { ProtectedRoute } from './ProtectedRoute/ProtectedRoute';
@@ -19,6 +20,10 @@ const PublicRoute = [
       {
         path: 'trending',
         element: <TrendingMovies />,
+      },
+      {
+        path: 'discover',
+        element: <Discover />,
       },
     ],
   },
