@@ -1,13 +1,14 @@
- 
 /* eslint-disable no-unused-vars */
 import './Navigation.scss';
 import { Typography, Row, Col, Input, Space } from 'antd';
 import { useEffect, useState } from 'react';
-
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+import { NavLink } from 'react-router-dom';
+import * as route from '../../../constants/routes';
 
 const Navigation = () => {
   const [isOpenNavigation, setOpenNavigation] = useState(false);
+
   const onNavigationToggle = () => {
     document.body.classList.toggle('is-navigation-open');
     document.body.classList.remove('is-search-open');
@@ -35,6 +36,7 @@ const Navigation = () => {
     }
     return () => window.removeEventListener('scroll', scrollHandler);
   });
+
   return (
     <div className="navigation">
       <div className="navigation__toggle" onClick={onNavigationToggle}>
@@ -46,44 +48,28 @@ const Navigation = () => {
         </Col>
         <Col className="navigation__menu-wrapper">
           <div className="navigation__menu">
-            <Typography
-              activeClassName="navigation__active"
-              className="navigation__link"
-            >
+            <NavLink className="navigation__link" exact="true" to={route.HOME}>
               Home
-            </Typography>
-            <Typography
-              activeClassName="navigation__active"
+            </NavLink>
+            <NavLink
               className="navigation__link"
+              exact="true"
+              to={route.TRENDING}
             >
               Trending
-            </Typography>
-            <Typography
-              activeClassName="navigation__active"
-              className="navigation__link"
-            >
+            </NavLink>
+            <NavLink className="navigation__link" exact="true">
               TV Shows
-            </Typography>
-            <Typography
-              activeClassName="navigation__active"
-              className="navigation__link"
-            >
+            </NavLink>
+            <NavLink className="navigation__link" exact="true">
               People
-            </Typography>
-            <Typography
-              activeClassName="navigation__active"
-              className="navigation__link"
-              exact
-              to={'/'}
-            >
+            </NavLink>
+            <NavLink className="navigation__link" exact="true" to={'/'}>
               Genres
-            </Typography>
-            <Typography
-              activeClassName="navigation__active"
-              className="navigation__link"
-            >
+            </NavLink>
+            <NavLink className="navigation__link" exact="true">
               Favorites
-            </Typography>
+            </NavLink>
           </div>
         </Col>
       </Row>

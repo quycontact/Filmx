@@ -20,10 +20,10 @@ const Movie = (props) => {
         />
       </Col>
       <Row onClick={handleClick} className="card-content">
-        <Col className="card-content_overlay">
+        <div className="card-content_overlay">
           <AiFillStar />
           <p className="card-content_description">{props.item?.vote_average}</p>
-        </Col>
+        </div>
       </Row>
     </Row>
   );

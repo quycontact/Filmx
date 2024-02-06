@@ -34,11 +34,11 @@ export const getGenres = () => httpRequest({ url: '/genre/movie/list' });
 //   })
 // };
 
-// export const getTrendingMovies = (page = 1) => {
-//   return httpRequest<IResponse<IMovieData[]>>({
-//     url: `/trending/all/day?page=${page}`
-//   });
-// }
+export const getTrendingMovies = (page = 1) => {
+  return httpRequest({
+    url: `/trending/all/day?page=${page}`,
+  });
+};
 
 // export const getDiscoverMovies = (filter: IFilterProps, page = 1) => {
 //   return httpRequest<IResponse<IMovieData[]>>({
